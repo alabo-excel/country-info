@@ -2,6 +2,7 @@ var spinner = document.getElementById('spinner')
 var enter = document.getElementById('enter')
 var send = document.getElementById('send')
 var light = document.getElementById('light')
+
 var dark = document.getElementById('dark')
 
 
@@ -35,13 +36,6 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 
 
-dark.addEventListener('click', () => {
-    if (document.body.style.backgroundColor == 'white') {
-        document.body.style.backgroundColor = 'hsl(209, 23%, 22%)'
-    } else {
-        document.body.style.backgroundColor = 'white'
-    }
-})
 
 send.addEventListener('click', () => {
     spinner.style.display = 'block'
@@ -70,4 +64,32 @@ send.addEventListener('click', () => {
 
         })
     })
+})
+
+
+dark.addEventListener('click', () => {
+    if (document.body.style.backgroundColor === 'white') {
+        document.body.style.backgroundColor = 'hsl(207, 26%, 17%)'
+        document.body.style.color = 'white'
+    } else {
+        document.body.style.backgroundColor = 'hsl(207, 26%, 17%)'
+        document.body.style.color = 'white'
+    }
+    dark.style.display = 'none'
+    light.style.display = 'block'
+
+})
+
+light.addEventListener('click', () => {
+    if (document.body.style.backgroundColor === 'hsl(207, 26%, 17%)') {
+        document.body.style.backgroundColor = 'white'
+        document.body.style.color = 'hsl(209, 23%, 22%)'
+
+    } else {
+        document.body.style.backgroundColor = 'white'
+        document.body.style.color = 'hsl(209, 23%, 22%)'
+    }
+    dark.style.display = 'block'
+    light.style.display = 'none'
+
 })
