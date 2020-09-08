@@ -1,0 +1,45 @@
+img {
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 98%)!important;
+    font-family: 'Nunito Sans';
+}
+
+#spinner {
+    position: fixed;
+    width: 10%;
+    top: 50%;
+    left: 45%;
+}
+
+input {
+    padding: 10px;
+}
+
+.light {
+    display: none;
+}
+
+#enter {
+    width: 40%;
+}
+
+#send {
+    width: 20%;
+}
+
+#content {
+    background-color: white;
+}
+
+@media(max-width:450px) {
+    input {
+        width: 100%!important;
+    }
+    #spinner {
+        width: 20%;
+    }
+}
