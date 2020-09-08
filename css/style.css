@@ -1,46 +1,59 @@
-img {
-    width: 100%;
-}
-
-body {
-    overflow-x: hidden;
-    font-family: 'Nunito Sans';
-    color: hsl(209, 23%, 22%);
-}
-
-#spinner {
-    position: fixed;
-    width: 10%;
-    top: 50%;
-    left: 45%;
-}
-
-input {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-#light {
-    display: none;
-}
-
-#enter {
-    width: 40%;
-}
-
-#send {
-    width: 20%;
-}
-
-@media(max-width:450px) {
-    input {
-        width: 100%!important;
+    img {
+        width: 100%;
     }
+    
+    body {
+        overflow-x: hidden;
+        font-family: 'Nunito Sans';
+        color: hsl(209, 23%, 22%);
+    }
+    
     #spinner {
+        position: fixed;
+        width: 10%;
+        top: 50%;
+        left: 45%;
+    }
+    
+    input {
+        padding: 10px;
+        margin-top: 10px;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    #light {
+        display: none;
+    }
+    
+    #enter {
+        width: 40%;
+    }
+    
+    #send {
         width: 20%;
     }
-    .row {
-        margin-right: 0px!important;
-        margin-left: 0px!important;
+    
+    @media(max-width:450px) {
+        input {
+            width: 100%!important;
+        }
+        #spinner {
+            width: 20%;
+        }
+        .row {
+            margin-right: 0px!important;
+            margin-left: 0px!important;
+        }
     }
-}
